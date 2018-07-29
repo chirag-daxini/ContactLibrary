@@ -1,5 +1,0 @@
-F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Core\bin\Debug\ContactLibrary.Core.dll
-F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Core\bin\Debug\ContactLibrary.Core.pdb
-F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Core\obj\Debug\ContactLibrary.Core.csprojResolveAssemblyReference.cache
-F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Core\obj\Debug\ContactLibrary.Core.dll
-F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Core\obj\Debug\ContactLibrary.Core.pdb
