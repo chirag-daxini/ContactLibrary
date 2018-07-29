@@ -1,0 +1,12 @@
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\obj\Debug\ContactLibrary.Data.csprojResolveAssemblyReference.cache
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\ContactLibrary.Data.dll.config
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\ContactLibrary.Data.dll
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\ContactLibrary.Data.pdb
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\ContactLibrary.Core.dll
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\EntityFramework.dll
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\ContactLibrary.Core.pdb
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\EntityFramework.xml
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\obj\Debug\ContactLibrary.Data.dll
+F:\InterviewExamples\ContactLibrary\ContactLibrary\ContactLibrary.Data\obj\Debug\ContactLibrary.Data.pdb
