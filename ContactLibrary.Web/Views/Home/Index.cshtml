@@ -1,7 +1,48 @@
-﻿
+﻿@using ContactLibrary.Domain;
+@model IEnumerable<ContactObject>
+
 @{
-    ViewBag.Title = "Customers";
+    ViewBag.Title = "Contacts";
 }
 
-<h2>List Of Customers</h2>
-
+<div class="top-title clearfix">
+    <h2>
+        <span class="title-text">Contacts</span>
+        @Html.ActionLink("Create", "Edit", "Home", null, new { @class = "btn btn-success" })
+    </h2>
+</div>
+<div class="box-model">
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Phone number</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ContactObject item in Model)
+                {
+                    <tr>
+                        <th>@item.FirstName</th>
+                        <th>@item.LastName</th>
+                        <th>@item.PhoneNumber</th>
+                        <th>@item.Email</th>
+                        <th>
+                            @Html.ActionLink("Edit", "Edit", "Home", new { id = item.ID }, new { @class = "btn btn-sm btn-success" })
+                            @using (Html.BeginForm("Delete", "Home", FormMethod.Post, new { @class = "js-delete-form" }))
+                            {
+                                @Html.Hidden("id", item.ID)
+                                @Html.AntiForgeryToken();
+                                <input type="submit" value="Remove" class="btn btn-danger btn-sm" />
+                            }
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

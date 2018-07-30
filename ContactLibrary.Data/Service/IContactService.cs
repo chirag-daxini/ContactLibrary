@@ -1,18 +1,19 @@
 ﻿using ContactLibrary.Core;
-using System;
+using ContactLibrary.Domain;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ContactLibrary.Data.Service
 {
     public interface IContactService
     {
-        IQueryable<ContactEntity> GetContacts();
-        ContactEntity GetContact(long id);
-        void CreateContact(ContactEntity contact);
-        void UpdateContact(ContactEntity contact);
-        void DeleteContact(ContactEntity contact);
+        IEnumerable<ContactObject> GetContacts();
+
+        ContactObject GetContact(long id);
+
+        void CreateContact(ContactObject entity);
+
+        void UpdateContact(ContactObject entity);
+
+        void DeleteContact(ContactObject entity);
     }
 }

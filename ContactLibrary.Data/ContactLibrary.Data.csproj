@@ -49,12 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IUnitOfWork.cs" />
+    <Compile Include="Common\UnitOfWork.cs" />
     <Compile Include="DataContext\IDbContext.cs" />
     <Compile Include="DataContext\SqlDbContext.cs" />
     <Compile Include="Mappings\ContactEntityMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Repository.cs" />
-    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Common\Repository.cs" />
+    <Compile Include="Common\IRepository.cs" />
+    <Compile Include="Repositories\ContactRepository.cs" />
+    <Compile Include="Repositories\IContactRepository.cs" />
     <Compile Include="Service\ContactService.cs" />
     <Compile Include="Service\IContactService.cs" />
   </ItemGroup>
@@ -67,6 +71,10 @@
     <ProjectReference Include="..\ContactLibrary.Core\ContactLibrary.Core.csproj">
       <Project>{9d7458bf-cfee-4d8a-a56a-fa23ffaf7d9d}</Project>
       <Name>ContactLibrary.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContactLibrary.Domain\ContactLibrary.Domain.csproj">
+      <Project>{10948868-FD20-466A-92B2-DDEDCF984C7D}</Project>
+      <Name>ContactLibrary.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

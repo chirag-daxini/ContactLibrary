@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,7 +43,14 @@
   <ItemGroup>
     <Compile Include="ContactEntity.cs" />
     <Compile Include="Entitybase.cs" />
+    <Compile Include="Mappers\ContactMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContactLibrary.Domain\ContactLibrary.Domain.csproj">
+      <Project>{10948868-fd20-466a-92b2-ddedcf984c7d}</Project>
+      <Name>ContactLibrary.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

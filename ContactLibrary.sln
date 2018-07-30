@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactLibrary.Core", "Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactLibrary.Data", "ContactLibrary.Data\ContactLibrary.Data.csproj", "{E1E7F4B5-C00C-4220-86B2-3D9770C85A5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactLibrary.Tests", "ContactLibrary.Tests\ContactLibrary.Tests.csproj", "{89DBCE76-771D-4EA9-A318-77F541A836DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactLibrary.Domain", "ContactLibrary.Domain\ContactLibrary.Domain.csproj", "{10948868-FD20-466A-92B2-DDEDCF984C7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{E1E7F4B5-C00C-4220-86B2-3D9770C85A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1E7F4B5-C00C-4220-86B2-3D9770C85A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1E7F4B5-C00C-4220-86B2-3D9770C85A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DBCE76-771D-4EA9-A318-77F541A836DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DBCE76-771D-4EA9-A318-77F541A836DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DBCE76-771D-4EA9-A318-77F541A836DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DBCE76-771D-4EA9-A318-77F541A836DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10948868-FD20-466A-92B2-DDEDCF984C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10948868-FD20-466A-92B2-DDEDCF984C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10948868-FD20-466A-92B2-DDEDCF984C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10948868-FD20-466A-92B2-DDEDCF984C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,10 +9,13 @@ namespace ContactLibrary.Data.DataContext
 {
     public class SqlDbContext : DbContext, IDbContext
     {
-        public SqlDbContext() : base("")
+        public SqlDbContext()
+            : base("name=ContactLibConnectionString")
         {
 
         }
+
+        public DbSet<ContactEntity> Contacts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

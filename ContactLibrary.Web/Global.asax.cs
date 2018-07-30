@@ -1,10 +1,9 @@
-﻿using ContactLibrary.Web.DependencyResolver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
+using ContactLibrary.Data.DataContext;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ContactLibrary.Web.App_Start;
+using System.Web.Optimization;
 
 namespace ContactLibrary.Web
 {
@@ -13,8 +12,17 @@ namespace ContactLibrary.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            System.Web.Mvc.DependencyResolver.SetResolver(new NinjectDependencyResolver());
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SqlDbContext>());
+
+            using (var con = new SqlDbContext())
+            {
+                con.Database.Initialize(true);
+                con.Database.CreateIfNotExists();
+            }
+
         }
     }
 }
