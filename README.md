@@ -14,11 +14,11 @@ Here is a working live demo :
 
 ### Landing Page
 
-### Add Contact Page
+![alt text](screenshots/Landing.PNG "ContactLibrary Landing")
 
+### Add/Edit Contact Page
 
-### Delete Contact Page
-
+![alt text](screenshots/Edit.PNG "ContactLibrary Edit Page")
 
 ## System requirements
 
