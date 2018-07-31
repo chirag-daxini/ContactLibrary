@@ -7,9 +7,6 @@
 </tr>
 </table>
 
-## Demo
-Here is a working live demo :  
-
 ## Site
 
 ### Landing Page
@@ -42,7 +39,9 @@ Here is a working live demo :
 ## Test
 * Run MSTest from ContactLibrary.Tests project.
 
-## License
+## Maintainer
+For feature request or troubleshooting email me @ <daxinichirag26@gmail.com>
+
 
 
 
