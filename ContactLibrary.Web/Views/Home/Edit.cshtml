@@ -1,4 +1,5 @@
-﻿@model ContactLibrary.Domain.ContactObject
+﻿@using System.Web.Optimization
+@model ContactLibrary.Domain.ContactObject
 
 
 @{
@@ -17,29 +18,36 @@
         </h2>
     </div>
     <div class="box-model">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         <div class="form-group">
             <label for="Number" class="col-sm-2 control-label">First name</label>
             <div class="col-sm-10">
                 @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter First Name" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label for="Number" class="col-sm-2 control-label">Last name</label>
             <div class="col-sm-10">
                 @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Last Name" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label for="Number" class="col-sm-2 control-label">Phone number</label>
             <div class="col-sm-10">
                 @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Phone Number" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             <label for="Number" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Email" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
             </div>
         </div>
     </div>
 }
+

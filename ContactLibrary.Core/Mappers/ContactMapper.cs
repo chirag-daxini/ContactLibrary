@@ -1,6 +1,4 @@
-﻿using System;
-using ContactLibrary.Core;
-using ContactLibrary.Domain;
+﻿using ContactLibrary.Domain;
 
 namespace ContactLibrary.Core.Mappers
 {

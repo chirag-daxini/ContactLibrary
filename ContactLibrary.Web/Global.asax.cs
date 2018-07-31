@@ -15,14 +15,7 @@ namespace ContactLibrary.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SqlDbContext>());
-
-            using (var con = new SqlDbContext())
-            {
-                con.Database.Initialize(true);
-                con.Database.CreateIfNotExists();
-            }
-
+            Database.SetInitializer(new CustomDatabaseIntializer());
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System.Data.Entity;
 using ContactLibrary.Core;
 using ContactLibrary.Data.Common;
-using System.Linq;
-using ContactLibrary.Data.DataContext;
 
 namespace ContactLibrary.Data.Repositories
 {
@@ -12,11 +10,6 @@ namespace ContactLibrary.Data.Repositories
             : base(context)
         {
 
-        }
-
-        public ContactEntity GetById(int id)
-        {
-            return FindBy(x => x.ID == id).FirstOrDefault();
         }
     }
 }

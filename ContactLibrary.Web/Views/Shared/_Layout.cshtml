@@ -7,26 +7,19 @@
     <title>@ViewBag.Title</title>
     @RenderSection("meta", required: false)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="~/Content/themes/default/bootstrap.css" rel="stylesheet">
-
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/datatable")
-
+    @Styles.Render("~/Content/bootstrap.css")
 </head>
 <body>
     <div class="container body-content">
         @RenderBody()
-        <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year</p>
+           
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/common")
-    @Scripts.Render("~/bundles/other")
+    @Scripts.Render("~/bundles/jqueryval")
 
     @RenderSection("scripts", required: false)
 

@@ -178,36 +178,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="scripts\ai.0.22.9-build00167.js" />
-    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="scripts\bootstrap-datepicker.min.js" />
-    <Content Include="scripts\bootstrap-tagsinput.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <None Include="scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="scripts\chart.bundle.min.js" />
-    <Content Include="scripts\circlehelper.js" />
-    <Content Include="scripts\common.js" />
-    <Content Include="scripts\html5shiv.js" />
-    <Content Include="scripts\jquery-1.10.2.js" />
-    <Content Include="scripts\jquery-1.10.2.min.js" />
-    <None Include="scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="scripts\jquery-1.9.1.js" />
-    <Content Include="scripts\jquery-1.9.1.min.js" />
-    <Content Include="scripts\jquery-dateFormat.min.js" />
-    <Content Include="scripts\jquery.dataTables.js" />
-    <Content Include="scripts\jquery.fileupload.js" />
-    <Content Include="scripts\jquery.iframe-transport.js" />
-    <Content Include="scripts\jquery.jsonview.js" />
-    <Content Include="scripts\jquery.ui.widget.js" />
-    <Content Include="scripts\jsoneditor.min.js" />
-    <Content Include="scripts\linked-services-view.js" />
-    <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="scripts\purl.js" />
-    <Content Include="scripts\select2.full.js" />
-    <Content Include="scripts\typeahead.bundle.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -232,8 +202,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="scripts\jquery-1.10.2.min.map" />
-    <Content Include="scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -245,6 +213,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ContactLibrary.Core\ContactLibrary.Core.csproj">

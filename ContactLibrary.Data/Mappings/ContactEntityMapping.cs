@@ -9,10 +9,10 @@ namespace ContactLibrary.Data.Mappings
             //key
             HasKey(t => t.ID);
             //properties
-            Property(t => t.FirstName).IsRequired().HasMaxLength(50);
-            Property(t => t.Email).IsRequired().HasMaxLength(50);
-            Property(t => t.LastName).IsRequired().HasMaxLength(50);
-            Property(t => t.PhoneNumber).IsRequired().HasMaxLength(20);
+            Property(t => t.FirstName).IsRequired().HasMaxLength(20);
+            Property(t => t.Email);
+            Property(t => t.LastName).IsRequired().HasMaxLength(20);
+            Property(t => t.PhoneNumber).IsRequired().HasMaxLength(10);
             //table
             ToTable("Contacts");
         }

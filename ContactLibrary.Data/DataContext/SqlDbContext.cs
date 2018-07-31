@@ -12,7 +12,7 @@ namespace ContactLibrary.Data.DataContext
         public SqlDbContext()
             : base("name=ContactLibConnectionString")
         {
-
+            
         }
 
         public DbSet<ContactEntity> Contacts { get; set; }

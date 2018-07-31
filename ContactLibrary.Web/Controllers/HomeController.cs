@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using System.Linq;
+using System.Net;
+using ContactLibrary.Data.Service;
+using ContactLibrary.Domain;
 
 namespace ContactLibrary.Web.Controllers
 {
-    using ContactLibrary.Data.Service;
-    using Domain;
-
     public class HomeController : Controller
     {
         private readonly IContactService _contactService;
-        public HomeController(ContactService contactService)
+        public HomeController(IContactService contactService)
         {
             _contactService = contactService;
         }
@@ -27,7 +25,10 @@ namespace ContactLibrary.Web.Controllers
         public ActionResult Edit(long? id)
         {
             if (!ModelState.IsValid)
-                return null;
+            {
+                var message = string.Join(" | ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, message);
+            }
 
             ContactObject obj = id.HasValue ? _contactService.GetContact(id.Value) : new ContactObject();
             return View(obj);
@@ -47,20 +48,24 @@ namespace ContactLibrary.Web.Controllers
                 {
                     _contactService.UpdateContact(obj);
                 }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            return View(obj);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(long id)
+        public ActionResult Delete(long? id)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && id.HasValue && id.Value > 0)
             {
-                var contact = _contactService.GetContact(id);
+                var contact = _contactService.GetContact(id.Value);
                 _contactService.DeleteContact(contact);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+
+            var message = string.Join(" | ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest, message);
         }
 
 

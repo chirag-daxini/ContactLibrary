@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Common\IUnitOfWork.cs" />
     <Compile Include="Common\UnitOfWork.cs" />
+    <Compile Include="DataContext\CustomDatabaseIntializer.cs" />
     <Compile Include="DataContext\IDbContext.cs" />
     <Compile Include="DataContext\SqlDbContext.cs" />
     <Compile Include="Mappings\ContactEntityMapping.cs" />

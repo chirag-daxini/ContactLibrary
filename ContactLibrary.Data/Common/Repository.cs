@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using ContactLibrary.Core;
-using ContactLibrary.Data.DataContext;
-using System.Data.Entity.Infrastructure;
+using System;
 
 namespace ContactLibrary.Data.Common
 {
+    
+
     public abstract class Repository<T> : IRepository<T> where T : Entitybase
     {
         protected DbContext _entities;
         protected readonly IDbSet<T> _dbset;
+        private bool disposed = false;
 
         protected Repository(DbContext context)
         {
@@ -26,11 +26,6 @@ namespace ContactLibrary.Data.Common
         public virtual T GetById(long id)
         {
             return this._dbset.Find(id);
-        }
-
-        public virtual IEnumerable<T> FindBy(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
-        {
-            return  this._dbset.Where(predicate).AsEnumerable();
         }
 
         public virtual T Add(T entity)
@@ -53,6 +48,24 @@ namespace ContactLibrary.Data.Common
         public virtual void Save()
         {
             this._entities.SaveChanges();
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    _entities.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
